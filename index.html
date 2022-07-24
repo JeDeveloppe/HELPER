@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="css/template_bootstrap.css">
+		<link rel="stylesheet" href="css/styles.css">
+		<title>Document</title>
+	</head>
+	<body>
+		<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+			<div class="container-fluid">
+				<a class="navbar-brand" href="/">Je-Developpe <small>{Helper}</small></a>
+            
+				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+
+				<div class="collapse navbar-collapse" id="navbarColor01">
+					<ul class="navbar-nav me-auto">
+						<li class="nav-item">
+							<a class="nav-link" href="#">Features</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#">Pricing</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#">About</a>
+						</li>
+						<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Symfony</a>
+							<div class="dropdown-menu">
+								<a class="dropdown-item" href="#symfony-env">.env</a>
+								<a class="dropdown-item" href="#">Another action</a>
+								<a class="dropdown-item" href="#">Something else here</a>
+								<div class="dropdown-divider"></div>
+								<a class="dropdown-item" href="#">Separated link</a>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+
+		<section class="my-5 p-2" id="symfony-env">
+			<h3 class="col-12 text-center">.ENV</h3>
+			<div class="row my-5">
+				<p class="col-12 lead text-center">Créer 2 fichiers à la racine du projet (.env.dev ET .env.prod) et coller le contenu ci-dessous en y renseignant les valeurs de votre projet.</p>
+
+				<div class="col-lg-9 mx-auto mt-4">
+					<div class="card">
+						<div class="card-header">
+							<p>
+							###> symfony/webapp-pack ###<br/>
+							MESSENGER_TRANSPORT_DSN=doctrine://default?auto_setup=0<br/>
+							###< symfony/webapp-pack ###
+							</p>
+
+							<p>
+							###> symfony/framework-bundle ###<br/>
+							APP_ENV=dev<br/>
+							APP_DEBUG=0<br/>
+							###< symfony/framework-bundle ###<br/>
+							</p>
+
+							<p>
+							###> doctrine/doctrine-bundle ###<br/>
+							# DATABASE CONNEXION<br/>
+							DATABASE_USER=<br/>
+							DATABASE_PASSWORD=<br/>
+							DATABASE_HOST=<br/>
+							DATABASE_PORT=<br/>
+							DATABASE_NAME=<br/>
+							DATABASE_SERVER_VERSION=<br/>
+							DATABASE_CHARTSET=<br/>
+							DATABASE_URL=mysql://${DATABASE_USER}:${DATABASE_PASSWORD}@${DATABASE_HOST}:${DATABASE_PORT}/${DATABASE_NAME}?serverVersion=${DATABASE_SERVER_VERSION}&charset=${DATABASE_CHARTSET}<br/>
+							# END DATABASE CONNEXION<br/>
+							###< doctrine/doctrine-bundle ###<br/>
+							</p>
+
+							<p>
+							###> symfony/messenger ###<br/>
+							# Choose one of the transports below<br/>
+							# MESSENGER_TRANSPORT_DSN=doctrine://default<br/>
+							# MESSENGER_TRANSPORT_DSN=amqp://guest:guest@localhost:5672/%2f/messages<br/>
+							# MESSENGER_TRANSPORT_DSN=redis://localhost:6379/messages<br/>
+							###< symfony/messenger ###<br/>
+							</p>
+
+							<p>
+							###> symfony/mailer ###<br/>
+							# MAILER_DSN=null://null<br/>
+							###< symfony/mailer ###
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	<!-- JavaScript Bundle with Popper -->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+	</body>
+</html>
