@@ -4,9 +4,10 @@
   right: 2rem;
   z-index: 10;
   border-radius: 50%;
-  border: 2px solid yellow;
+  border: 2px solid gray;
+  box-shadow: 2rem;
   padding: 1rem;
   color: black;
-  background-color: yellow;
+  background-color: rgb(76, 155, 232);
   text-decoration: none;
 }/*# sourceMappingURL=styles.css.map */
