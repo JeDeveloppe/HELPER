@@ -1,0 +1,84 @@
+<section class="my-5" id="symfony">
+    <h2 class="col-6 mx-auto text-center border-top border-2 border-secondary pt-5">SYMFONY</h2>
+    <article class="my-5 p-2" id="symfony-env">
+        <h3 class="col-11 mx-auto">.ENV</h3>
+        <div class="row my-5">
+            <p class="col-12 lead text-center">Créer 2 fichiers à la racine du projet (.env.dev ET .env.prod) et coller le contenu ci-dessous en y renseignant les valeurs de votre projet.</p>
+
+            <div class="col-lg-9 mx-auto mt-4">
+                <div class="card">
+                    <div class="card-header">
+                        <p>
+                            ###> symfony/webapp-pack ###<br/>
+                            MESSENGER_TRANSPORT_DSN=doctrine://default?auto_setup=0<br/>
+                            ###< symfony/webapp-pack ###
+                        </p>
+
+                        <p>
+                            ###> symfony/framework-bundle ###<br/>
+                            APP_ENV=dev<br/>
+                            APP_DEBUG=0<br/>
+                            ###< symfony/framework-bundle ###<br/>
+                        </p>
+
+                        <p>
+                            ###> doctrine/doctrine-bundle ###<br/>
+                            # DATABASE CONNEXION<br/>
+                            DATABASE_USER=<br/>
+                            DATABASE_PASSWORD=<br/>
+                            DATABASE_HOST=<br/>
+                            DATABASE_PORT=<br/>
+                            DATABASE_NAME=<br/>
+                            DATABASE_SERVER_VERSION=<br/>
+                            DATABASE_CHARTSET=<br/>
+                            DATABASE_URL=mysql://${DATABASE_USER}:${DATABASE_PASSWORD}@${DATABASE_HOST}:${DATABASE_PORT}/${DATABASE_NAME}?serverVersion=${DATABASE_SERVER_VERSION}&charset=${DATABASE_CHARTSET}<br/>
+                            # END DATABASE CONNEXION<br/>
+                            ###< doctrine/doctrine-bundle ###<br/>
+                        </p>
+
+                        <p>
+                            ###> symfony/messenger ###<br/>
+                            # Choose one of the transports below<br/>
+                            # MESSENGER_TRANSPORT_DSN=doctrine://default<br/>
+                            # MESSENGER_TRANSPORT_DSN=amqp://guest:guest@localhost:5672/%2f/messages<br/>
+                            # MESSENGER_TRANSPORT_DSN=redis://localhost:6379/messages<br/>
+                            ###< symfony/messenger ###<br/>
+                        </p>
+
+                        <p>
+                            ###> symfony/mailer ###<br/>
+                            # MAILER_DSN=null://null<br/>
+                            ###< symfony/mailer ###
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </article>
+
+    <article class="my-5 p-2" id="symfony-docker">
+        <h3 class="col-11 mx-auto">DOCKER</h3>
+        <div class="row my-5">
+            <p class="col-12 lead text-center">
+                Après avoir renseigné <a href="#symfony-env">les variables d'environnement</a>, possibilité de créer un container tournant sur MySql et PhpMyAdmin.
+            </p>
+
+            <div class="col-lg-9 mx-auto mt-4">
+                <div class="card">
+                    <div class="card-header">
+                        <p>
+                            Démarrer un container:<br/>
+                            docker-compose up -d
+                        </p>
+
+                        <p>
+                            Terminer le container:<br/>
+                            docker-compose down -d
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </article>
+</section>
