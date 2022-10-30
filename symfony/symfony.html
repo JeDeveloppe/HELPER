@@ -9,47 +9,32 @@
                 <div class="card">
                     <div class="card-header">
                         <p>
-                            ###> symfony/webapp-pack ###<br/>
-                            MESSENGER_TRANSPORT_DSN=doctrine://default?auto_setup=0<br/>
-                            ###< symfony/webapp-pack ###
+                        ### symfony/webapp-pack ###<br/>
+                        MESSENGER_TRANSPORT_DSN=doctrine://default?auto_setup=0<br/>
+                        ###< symfony/webapp-pack ###
                         </p>
-
                         <p>
-                            ###> symfony/framework-bundle ###<br/>
-                            APP_ENV=***<br/>
-                            APP_DEBUG=***<br/>
-                            APP_SECRET={from .env}<br/>
-                            ###< symfony/framework-bundle ###<br/>
+                        ###> symfony/framework-bundle ###<br/>
+                        APP_DEBUG={0 en prod et 1 en dev}<br/>
+                        APP_SECRET={à copier de .env}<br/>
+                        ###< symfony/framework-bundle ###
                         </p>
-
                         <p>
-                            ###> doctrine/doctrine-bundle ###<br/>
-                            # DATABASE CONNEXION<br/>
-                            DATABASE_USER=<br/>
-                            DATABASE_PASSWORD=<br/>
-                            DATABASE_HOST=<br/>
-                            DATABASE_PORT=<br/>
-                            DATABASE_NAME=<br/>
-                            DATABASE_SERVER_VERSION=<br/>
-                            DATABASE_CHARTSET=<br/>
-                            DATABASE_URL=mysql://${DATABASE_USER}:${DATABASE_PASSWORD}@${DATABASE_HOST}:${DATABASE_PORT}/${DATABASE_NAME}?serverVersion=${DATABASE_SERVER_VERSION}&charset=${DATABASE_CHARTSET}<br/>
-                            # END DATABASE CONNEXION<br/>
-                            ###< doctrine/doctrine-bundle ###<br/>
+                        # DATABASE CONNEXION<br/>
+                        DATABASE_USER=<br/>
+                        DATABASE_PASSWORD=<br/>
+                        DATABASE_NAME=<br/>
+                        DATABASE_HOST=<br/>
+                        DATABASE_PORT=<br/>
+                        DATABASE_URL=mysql://${DATABASE_USER}:${DATABASE_PASSWORD}@${DATABASE_HOST}:${DATABASE_PORT}/${DATABASE_NAME}?serverVersion=5.7&charset=utf8mb4<br/>
+                        # END DATABASE CONNEXION
                         </p>
-
                         <p>
-                            ###> symfony/messenger ###<br/>
-                            # Choose one of the transports below<br/>
-                            # MESSENGER_TRANSPORT_DSN=doctrine://default<br/>
-                            # MESSENGER_TRANSPORT_DSN=amqp://guest:guest@localhost:5672/%2f/messages<br/>
-                            # MESSENGER_TRANSPORT_DSN=redis://localhost:6379/messages<br/>
-                            ###< symfony/messenger ###<br/>
-                        </p>
-
-                        <p>
-                            ###> symfony/mailer ###<br/>
-                            # MAILER_DSN=null://null<br/>
-                            ###< symfony/mailer ###
+                        HOST_SMTP={exemple: smtp.ionos.fr}<br/>
+                        COMPTE_SMTP={exemple: compte@domaine.fr}r<br/>
+                        PASSWORD_SMTP={password from compte@domaine.fr}<br/>
+                        PORT_SMTP={exemple: 465}
+                        MAILER_DSN=smtp://${COMPTE_SMTP}:${PASSWORD_SMTP}@${HOST_SMTP}:${PORT_SMTP}
                         </p>
                     </div>
                 </div>
